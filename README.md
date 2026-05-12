@@ -38,3 +38,12 @@ Versión inicial del proyecto.
 
 ##Equipo de trabajo
 Anthony Alejandro Minga Campoverde
+
+## Convención de commits
+El equipo utilizará mensajes de commit con el siguiente formato:
+- feat: nueva funcionalidad
+- fix: corrección de errores
+- docs: cambios en documentación
+- refactor: mejora interna del código
+- test: pruebas
+- chore: tareas de configuración

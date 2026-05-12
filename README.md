@@ -35,3 +35,6 @@ uvicorn app.main:app --reload
 http://127.0.0.1:8000/docs
 Estado del proyecto
 Versión inicial del proyecto.
+
+##Equipo de trabajo
+Anthony Alejandro Minga Campoverde

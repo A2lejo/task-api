@@ -6,6 +6,7 @@ app = FastAPI(
     description="Mini API para gestionar reservas",
     version="1.0.0"
 )
+
 class ReservationCreate(BaseModel):
     title: str
     description: str | None = None

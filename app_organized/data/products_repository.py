@@ -4,8 +4,6 @@ products: list[Product] = [
     Product(id=1, name="Laptop", description="Equipo portátil para oficina", stock=8, price=1250.0),
     Product(id=2, name="Mouse", description="Mouse inalámbrico", stock=24, price=18.5),
 ]
-next_id = 1
-
 next_id = len(products) + 1
 
 def get_all_products():

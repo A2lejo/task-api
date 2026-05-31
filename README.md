@@ -47,3 +47,6 @@ El equipo utilizará mensajes de commit con el siguiente formato:
 - refactor: mejora interna del código
 - test: pruebas
 - chore: tareas de configuración
+
+## Proyecto en capas
+se encuentra en la carpeta de app_organized

@@ -12,3 +12,13 @@ class Product(BaseModel):
     description: str | None = None
     stock: int = 0
     price: float | None = None
+    
+class CustomerCreate(BaseModel):
+    name: str
+    email: str
+
+class Customer(BaseModel):
+    id: int
+    name: str
+    email: str
+    active: bool = True

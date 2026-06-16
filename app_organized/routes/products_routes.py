@@ -2,8 +2,9 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from app_organized.models.models import ProductCreate
 from app_organized.services.products_service import list_products, register_product, change_stock
+from app_organized.utils.validators import validate_exists
 
-router = APIRouter(prefix="/products")
+router = APIRouter(prefix="/products", tags=["Products"])
 
 class StockUpdate(BaseModel):
     stock: int
@@ -19,6 +20,4 @@ def create_product_endpoint(data: ProductCreate):
 @router.put("/{product_id}/stock")
 def update_stock_endpoint(product_id: int, data: StockUpdate):
     product = change_stock(product_id, data.stock)
-    if not product:
-        raise HTTPException(status_code=404, detail="Producto no encontrado")
-    return product
+    return validate_exists(product, "Producto no encontrado")
